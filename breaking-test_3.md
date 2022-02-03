@@ -1,1 +1,0 @@
-[google]random  hello ]good bye (www.google.com) 
