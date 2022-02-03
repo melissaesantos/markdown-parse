@@ -30,11 +30,14 @@ public class MarkdownParse {
                 if(!markdown.substring(nextOpenBracket-1, nextOpenBracket).equals("!")){
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                 }
-                currentIndex = closeParen + 1;
             } else {
-                toReturn.add(markdown.substring(openParen + 1, closeParen));
-                currentIndex = closeParen + 1;
+                if(markdown.substring(openParen+1, openParen + 2).equals("\"")){
+                    toReturn.add(markdown.substring(openParen + 2, closeParen - 1));
+                } else {
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
             }
+            currentIndex = closeParen + 1;
             // System.out.println("Value of current index after loop: " + currentIndex);
         }
         return toReturn;
