@@ -38,7 +38,7 @@ public class MarkdownParse {
                 }
             }
             currentIndex = closeParen + 1;
-            // System.out.println("Value of current index after loop: " + currentIndex);
+          //  // System.out.println("Value of current index after loop: " + currentIndex);
         }
         return toReturn;
     }
